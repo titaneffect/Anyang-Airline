@@ -5,8 +5,8 @@ document.getElementById("login-btn").addEventListener("click", function() {
 
 document.getElementById("signup-btn").addEventListener("click", function() {
     // 회원가입 버튼 클릭 시 새 창을 열면서 회원가입 페이지로 이동
-    const width = 400; // 창 너비
-    const height = 600; // 창 높이
+    const width = 500; // 창 너비
+    const height = 400; // 창 높이
     const left = (window.screen.width / 2) - (width / 2); // 화면 중앙에 위치
     const top = (window.screen.height / 2) - (height / 2);
 
