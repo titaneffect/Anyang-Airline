@@ -1,0 +1,182 @@
+/* 스타일을 위한 CSS */
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f9f9f9;
+}
+/* 상단 로고 영역 */
+header {
+	height: 200px; /* 상단 영역의 높이 */
+	display: flex;
+	justify-content: center; /* 중간에 배치 */
+	align-items: center; /* 세로 가운데 정렬 */
+	background-color: #ffffff;
+}
+/* 이미지 크기 및 위치 */
+.header img {
+	max-width: 100%; /* 부모 요소의 너비에 맞게 이미지 크기 조정 */
+	height: auto; /* 비율에 맞게 세로 크기 자동 조정 */
+}
+.logo {
+	font-size: 2rem;
+	font-weight: bold;
+}
+.logo::before,
+.logo::after {
+	content: ""; /* 로고 주변에 선 추가 */
+	display: inline-block;
+	width: 50px;
+	height: 2px;
+	background-color: white;
+	margin: 0 15px;
+}
+main {
+	display: flex;
+	flex-direction: row-reverse; /* 로그인 박스를 오른쪽으로 이동 */
+	padding: 20px 5cm; /* 상하 20px, 좌우 5cm 여백 */
+	gap: 20px; /* 좌우 섹션 간 간격 */
+	height: calc(100vh - 120px); /* 헤더/푸터 제외 */
+	box-sizing: border-box;
+}
+.content {
+	margin-top: 40px;
+	text-align: center;
+}
+.login-box {
+	width: 300px; /* 일반적인 로그인 박스 크기 */
+	padding: 20px;
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
+	margin-top: 0;
+	color: #333;
+}
+
+.login-box form {
+	display: flex;
+	flex-direction: column;
+}
+
+.login-box input {
+	margin-bottom: 15px;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.button-group {
+	display: flex;
+	justify-content: center; /* 버튼을 중앙에 정렬 */
+	gap: 10px; /* 버튼 간 간격을 10px로 설정 */
+}
+
+.button-group button {
+	width: 2cm; /* 버튼 너비 */
+	height: 1cm; /* 버튼 높이 */
+	font-size: 14px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.button-group .login-btn {
+	background-color: #004080;
+	color: white;
+}
+
+.button-group .login-btn:hover {
+	background-color: #003060;
+}
+
+.button-group .signup-btn {
+	background-color: #f4f4f4;
+	color: #333;
+	border: 1px solid #ddd;
+}
+
+.button-group .signup-btn:hover {
+	background-color: #e0e0e0;
+}
+
+.button-group button + button {
+	margin-left: 5px; /* 버튼 사이의 간격 */
+}
+
+
+.reservation-box {
+	flex: 1; /* 나머지 공간을 차지 */
+	padding: 20px;
+	background-color: #f4f4f4;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-box h2 {
+	margin-top: 0;
+	color: #333;
+}
+
+.reservation-box form {
+	display: flex;
+	flex-direction: column;
+}
+
+.reservation-box input, .reservation-box select, .reservation-box button {
+	margin-bottom: 15px;
+	padding: 10px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.reservation-box button {
+	background-color: #004080;
+	color: white;
+	cursor: pointer;
+	border: none;
+}
+
+.reservation-box button:hover {
+	background-color: #003060;
+}
+.flight-list {
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	max-height: 200px; /* 목록의 최대 높이 설정 */
+	overflow-y: auto; /* 스크롤 활성화 */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flight-list h3 {
+	margin-top: 0;
+	font-size: 16px;
+	color: #333;
+	text-align: left;
+}
+
+.flight-list ul {
+	list-style-type: none; /* 점 제거 */
+	padding: 0;
+	margin: 0;
+}
+
+.flight-list li {
+	padding: 8px 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.flight-list li:last-child {
+	border-bottom: none; /* 마지막 항목의 하단 테두리 제거 */
+}
+
+.flight-list li:hover {
+	background-color: #f4f4f4;
+}
