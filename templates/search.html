@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Search Flights</h2>
+<form action="/search" method="POST">
+    <label for="origin">Origin:</label>
+    <input type="text" id="origin" name="origin" required>
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" name="destination" required>
+    <button type="submit">Search</button>
+</form>
+{% endblock %}
