@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="안양항공 홈페이지입니다.">
+    <meta name="author" content="Anyang Airline">
+    <title>안양항공 > 운항정보</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 외부 CSS 파일 연결 -->
+    <link rel="icon" href="favicon.ico"> <!-- 즐겨찾기 아이콘 -->
+</head>
+<body>
+    <main>
+        <div class="reservation-box">
+        <h2>예약하기</h2>
+        <form>
+            <label for="destination">목적지</label>
+            <input type="text" id="destination" placeholder="목적지를 입력하세요">
+
+            <label for="date">출발 날짜</label>
+            <input type="date" id="date">
+            
+            <button type="submit">검색하기</button>
+        </form>
+        <div class="flight-list" id="flight-list">
+            <h3>항공편 목록</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="departure-time">출발시간</th>
+                        <th class="destination">목적지</th>
+                        <th class="airline-flight">항공사/운항편명</th>
+                        <th class="terminal">터미널</th>
+                        <th class="checkin-counter">체크인 카운터</th>
+                        <th class="boarding-gate">탑승구</th>
+                        <th class="departure-status">출발현황</th>
+                        <th class="flight-update">운항속보</th>
+                    </tr>
+                </thead>
+            <ul id="flight-results">
+                <!-- 여기에 항공편 정보가 동적으로 추가됩니다 -->
+            </ul>
+        </div>
+    </main>
+</div>

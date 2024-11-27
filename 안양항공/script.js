@@ -1,19 +1,27 @@
 document.getElementById("login-btn").addEventListener("click", function() {
-     // 로그인 버튼 이벤트 처리
+    // 로그인 버튼 클릭 시 기본 폼 제출을 막습니다.
+    event.preventDefault()
     alert("Login functionality here!");
+    window.location.href = "reservation.html";
+    
 });
 
 document.getElementById("signup-btn").addEventListener("click", function() {
     // 회원가입 버튼 클릭 시 새 창을 열면서 회원가입 페이지로 이동
-    const width = 500; // 창 너비
-    const height = 400; // 창 높이
-    const left = (window.screen.width / 2) - (width / 2); // 화면 중앙에 위치
-    const top = (window.screen.height / 2) - (height / 2);
+    const width = 400; // 창 너비
+    const height = 450; // 창 높이
+    // 화면 크기 가져오기
+    const screenWidth = screen.width;
+    const screenHeight = screen.height;
+ 
+    // 새 창을 띄울 위치 계산
+    const left = (screenWidth - width) / 2;
+    const top = (screenHeight - height) / 2;
 
     window.open(
         "signup.html", // 새 창에서 열릴 URL
         "회원가입", // 새 창의 이름 (고유)
-        `width=${width},height=${height},top=${top},left=${left},resizable=no`
+        `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes`
     );
 });
 

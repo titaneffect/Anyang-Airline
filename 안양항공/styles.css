@@ -32,7 +32,6 @@ main {
 	flex-direction: row-reverse;
 	padding: 20px 5cm;
 	gap: 20px;
-	height: calc(100vh - 120px);
 	box-sizing: border-box;
 }
 .content {
@@ -47,6 +46,7 @@ main {
 	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .login-box h2 {
 	margin-top: 0;
 	color: #333;
@@ -62,6 +62,51 @@ main {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 }
+.search-box {
+	flex: 1;
+	width: 1100px; 
+	padding: 20px;
+	background-color: #f4f4f4;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-box h2 {
+	margin-top: 0;
+	color: #333;
+}
+
+.search-box form {
+	display: flex;
+	flex-direction: column;
+}
+
+.search-box input, .search-box select, .search-box button {
+	margin-bottom: 15px;
+	padding: 10px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.search-box button {
+	background-color: #004080;
+	color: white;
+	cursor: pointer;
+	border: none;
+}
+
+.search-box button:hover {
+	background-color: #003060;
+}
+.search-box button {
+	background-color: #004080;
+	color: white;
+	cursor: pointer;
+	border: none;
+}
+
 .button-group {
 	display: flex;
 	justify-content: center; 
@@ -100,17 +145,21 @@ main {
 }
 .signup-box {
     background-color: #fff;
-    width: 400px;
-    padding: 5px;
+    width: 300px;
+    padding: 20px;
     border-radius: 8px;
+	border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
 	margin: 0 auto;
 	margin-top: 40px;
 }
 .signup-box h2 {
     margin-bottom: 20px;
     color: #333;
+}
+.signup-box form {
+	display: flex;
+	flex-direction: column;
 }
 .signup-box input {
     margin-bottom: 15px;
@@ -119,28 +168,12 @@ main {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 }
-.signup-box .button-group {
-    text-align: center;
-    margin-top: 20px;
-}
-.signup-box button {
-    width: 2cm; 
-	height: 1cm;
-	font-size: 14px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	padding: 10px 20px;
-    background-color: #4CAF50;
-}
-.signup-box button:hover {
-    background-color: #45a049;
-}
 .reservation-box {
 	flex: 1;
 	padding: 20px;
 	background-color: #f4f4f4;
 	border-radius: 8px;
+	border: 1px solid #ddd;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -172,6 +205,28 @@ main {
 .reservation-box button:hover {
 	background-color: #003060;
 }
+
+table {
+	width: 100%; /* 테이블 전체 너비를 100%로 설정 */
+	border-collapse: collapse; /* 테이블 셀 간의 경계선 겹침 방지 */
+}
+th, td {
+	padding: 12px; /* 셀 내부 여백 */
+	text-align: center; /* 텍스트를 가운데 정렬 */
+	border: 1px solid #ccc; /* 테두리 */
+}
+th {
+	background-color: #f2f2f2; /* 헤더 배경색 */
+	font-weight: bold; /* 헤더 글자 굵게 */
+}
+.departure-time { width: 15%; }
+.destination { width: 15%; }
+.airline-flight { width: 20%; }
+.terminal { width: 10%; }
+.checkin-counter { width: 10%; }
+.boarding-gate { width: 10%; }
+.departure-status { width: 10%; }
+.flight-update { width: 10%; }
 .flight-list {
 	margin-top: 20px;
 	padding: 10px;
